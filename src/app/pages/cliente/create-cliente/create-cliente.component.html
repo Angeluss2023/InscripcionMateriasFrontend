@@ -1,0 +1,47 @@
+
+<app-cabecera></app-cabecera>
+
+<section>
+  <div class="form-box">
+    <div class="form-value">
+      <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+        <div class="contenedor-titulo">
+          <h2>Registrar Usuario</h2>
+        </div>
+
+
+        <div class="inputbox">
+          <i class="fas fa-user"></i>
+          <input type="text" [(ngModel)]="Usuario.nombre" name="nombre" required #nombre="ngModel">
+          <label>Nombre</label>
+        </div>
+
+        <div class="inputbox">
+          <i class="fas fa-user"></i>
+          <input type="text" [(ngModel)]="Usuario.apellido" name="apellido" required #apellido="ngModel">
+          <label>Apellido</label>
+        </div>
+
+        <div class="inputbox">
+          <i class="fas fa-envelope"></i>
+          <input type="email" [(ngModel)]="Usuario.correo" name="correo" required #correo="ngModel">
+          <label>Correo</label>
+        </div>
+
+        <div class="inputbox">
+          <i class="fas fa-lock"></i>
+          <input type="password" [(ngModel)]="Usuario.password" name="contrasena" required #contrasena="ngModel">
+          <label>Contraseña</label>
+        </div>
+
+        <div class="inputbox">
+          <i class="fas fa-book"></i>
+          <input type="text" [(ngModel)]="Usuario.curso" name="curso" required #curso="ngModel">
+          <label>Curso</label>
+        </div>
+        
+        <button mat-raised-button color="primary" class="full-width-button" type="submit" [disabled]="!registerForm.valid">Registrar</button>
+      </form>
+    </div>
+  </div>
+</section>

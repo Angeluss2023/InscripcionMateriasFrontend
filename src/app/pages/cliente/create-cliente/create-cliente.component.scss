@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e9ecef;
+}
+
+.form-box {
+    width: 400px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-value {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-titulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contenedor-titulo h2 {
+    color: #495057;
+    font-size: 24px;
+}
+
+.inputbox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.inputbox input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.inputbox i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #6c757d;
+}
+
+.inputbox label {
+    display: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0069d9;
+}
+
+button:disabled {
+    background-color: #007bff;
+    opacity: 0.5;
+    cursor: default;
+}

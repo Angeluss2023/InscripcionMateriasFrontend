@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <button mat-button routerLink="/home" class="toolbar-button"><mat-icon>home</mat-icon> Home</button>
+  <span class="separator"></span>
+
+  <!-- Menú de cursos -->
+  <button mat-button [matMenuTriggerFor]="menu2" class="toolbar-button">
+    <mat-icon>assignment</mat-icon> Curso
+  </button>
+  <mat-menu #menu2="matMenu">
+    <button mat-menu-item routerLink="/crear-curso"><mat-icon>list_alt</mat-icon>Crear curso</button>
+    <button mat-menu-item routerLink="/mant-curso"><mat-icon>list_alt</mat-icon>Mantenimiento curso</button>
+  </mat-menu>
+
+  <!-- Menú de usuario -->
+  <button mat-button [matMenuTriggerFor]="menu3" class="toolbar-button">
+    <mat-icon>assignment</mat-icon> Usuario
+  </button>
+  <mat-menu #menu3="matMenu">
+    <button mat-menu-item routerLink="/actualizar-usuario/:id"><mat-icon>list_alt</mat-icon>Actualizar datos</button>
+    <button mat-menu-item routerLink="/usuario-curso"><mat-icon>list_alt</mat-icon>Tus cursos</button>
+  </mat-menu>
+
+  <span class="spacer"></span>
+
+  <!-- Cerrar Sesión -->
+  <button mat-button color="warn" class="toolbar-button" (click)="logout()">
+    <mat-icon>exit_to_app</mat-icon> Cerrar Sesión
+  </button>
+</mat-toolbar>

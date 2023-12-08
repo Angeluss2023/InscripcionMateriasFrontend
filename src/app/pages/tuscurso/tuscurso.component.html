@@ -1,0 +1,37 @@
+<app-menu></app-menu>
+<app-cabecera></app-cabecera>
+
+<div *ngIf="cursos.length > 0; else noCursos">
+  <h2>Cursos Asignados al Usuario</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Categoría</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let curso of cursos">
+            <td>{{ curso.name}}</td>
+            <td>{{ curso.description}}</td>
+<<<<<<< HEAD
+            <td>{{ curso.precio }}</td>
+=======
+            <td>{{ curso.category }}</td>
+>>>>>>> 202884d16b844c4b37ae6d936b450205b211304f
+          </tr>
+          
+          
+          
+        
+        
+          
+          
+          
+    </tbody>
+  </table>
+</div>
+<ng-template #noCursos>
+  <p>No hay cursos asignados al usuario.</p>
+</ng-template>

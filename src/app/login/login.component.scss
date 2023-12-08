@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f4f4f4; /* Fondo claro para un diseño más limpio */
+}
+
+.form-container {
+  width: 400px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: transparent; /* Asegúrate de que el fondo sea transparente */
+    /* Ajusta el padding para dejar espacio para el label */
+    padding-top: 20px;
+  }
+  
+  .input-group label {
+    position: absolute;
+    left: 15px;
+    /* Cambia la posición top para alinear correctamente con el input */
+    top: 10px; /* Ajusta según sea necesario */
+    background-color: #fff;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #666;
+    transition: 0.3s ease all; /* Transición suave al mover el label */
+  }
+  
+  /* Estilo cuando el input está enfocado o lleno */
+  .input-group input:focus ~ label,
+  .input-group input:valid ~ label {
+    top: -10px; /* Mueve el label hacia arriba */
+    font-size: 12px; /* Reduce el tamaño del label */
+    color: #333;
+  }
+  
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: none;
+  margin-top: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
